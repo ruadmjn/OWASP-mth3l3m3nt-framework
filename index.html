@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Owasp-mth3l3m3nt-framework by alienwithin</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Owasp-mth3l3m3nt-framework</h1>
+        <h2>OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="owasp-mth3l3m3nt-framework" class="anchor" href="#owasp-mth3l3m3nt-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>OWASP Mth3l3m3nt Framework</h1>
+
+<p>OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go.</p>
+
+<p>Modules Packed in so far are: </p>
+
+<ul>
+<li>Payload Store</li>
+<li>Shell Generator (PHP/ASP/JSP/JSPX)</li>
+<li>Payload Encoder and Decoder (Base64/Rot13/Hex/Hexwith \x seperator/ Hex with 0x Prefix)</li>
+<li>CURL GUI (GET/POST)</li>
+<li>LFI Exploitation module (currently prepacked with: Koha Lib Lime LFI/ Wordpress Aspose E-book generator LFI/ Zimbra Collaboration Server LFI)</li>
+<li>HTTP Bot Herd to control web shells. </li>
+</ul>
+
+<p>Currently it is set to use a flat file database. </p>
+
+<p>Copy all the files into your webroot except db_dump_optional</p>
+
+<p>Ensure the Folders Below are writeable: </p>
+
+<ul>
+<li>tmp</li>
+<li>framework/data</li>
+<li>framework/data/site_config.json</li>
+</ul>
+
+<p>It should run from the get go All just navigate to it.</p>
+
+<p>the login url is: /cnc</p>
+
+<p>username:mth3l3m3nt
+password:mth3l3m3nt</p>
+
+<p>By Default I have set it to use the JIG database but this you can change at any point in the backend. 
+The DB Dump in place is for users who use MySQL and need demo data. Unfortunately I have only done for MySQL. It's my DB of choice. </p>
+
+<p>Alternatively watch the installation here: </p>
+
+<p><a href="https://www.youtube.com/playlist?list=PL8peOGsl5TC4WscgWaNMx0xJlS6X2QJI0">https://www.youtube.com/playlist?list=PL8peOGsl5TC4WscgWaNMx0xJlS6X2QJI0</a></p>
+
+<p>If you would like to switch from JIG you can do so in the settings. Please note the DB has to be created, it only populates it with the required tables, it doesn't drop or create the DB , other supported Databases are: </p>
+
+<ul>
+<li>Mongo DB </li>
+<li>MSSQL</li>
+<li>PostgreSQL</li>
+<li>SQLite</li>
+<li>MySQL</li>
+</ul>
+
+<p>Other than SQLite please ensure that you have the PHP extensions for the Databases above so that it can access them through PHP Data Objects.</p>
+
+<p>For MySQL users needing MySQL Sample Data like alot of it especially payloads switch the database to MySQL and import data from the Dump to populate.</p>
+
+<p>Incase of questions or suggestions or bugs and what nots:
+<a href="http://munir.skilledsoft.com">http://munir.skilledsoft.com</a></p>
+
+<p>It's been tested on : </p>
+
+<ul>
+<li>Apache </li>
+<li>Lightspeed</li>
+<li>Lighttpd</li>
+</ul>
+
+<p>Incase you test on another server please give your review.</p>
+
+<p>If installing it in a subfolder edit the .htaccess file to reflect the RewriteBase as the subfolder.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
