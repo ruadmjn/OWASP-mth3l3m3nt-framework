@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="OWASP Mth3l3m3nt Framework : OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go.">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Owasp-mth3l3m3nt-framework by alienwithin</title>
+    <title>OWASP Mth3l3m3nt Framework</title>
   </head>
 
   <body>
 
-    <header>
-      <div class="container">
-        <h1>Owasp-mth3l3m3nt-framework</h1>
-        <h2>OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go.</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework">View on GitHub</a>
 
-        <section id="downloads">
-          <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+          <h1 id="project_title">OWASP Mth3l3m3nt Framework</h1>
+          <h2 id="project_tagline">OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go.</h2>
 
-    <div class="container">
-      <section id="main_content">
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a id="owasp-mth3l3m3nt-framework" class="anchor" href="#owasp-mth3l3m3nt-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>OWASP Mth3l3m3nt Framework</h1>
-
-<p>OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go.</p>
 
 <p>Modules Packed in so far are: </p>
 
@@ -42,6 +43,9 @@
 <li>CURL GUI (GET/POST)</li>
 <li>LFI Exploitation module (currently prepacked with: Koha Lib Lime LFI/ Wordpress Aspose E-book generator LFI/ Zimbra Collaboration Server LFI)</li>
 <li>HTTP Bot Herd to control web shells. </li>
+<li>WHOIS</li>
+<li>String Tools </li>
+<li>Client Side Obfuscator</li>
 </ul>
 
 <p>Currently it is set to use a flat file database. </p>
@@ -87,6 +91,9 @@ The DB Dump in place is for users who use MySQL and need demo data. Unfortunatel
 <p>Incase of questions or suggestions or bugs and what nots:
 <a href="http://munir.skilledsoft.com">http://munir.skilledsoft.com</a></p>
 
+<p>You may also send them or subscribe to the mailing list: 
+<a href="https://lists.owasp.org/mailman/listinfo/owasp-mth3l3m3nt-framework-project">https://lists.owasp.org/mailman/listinfo/owasp-mth3l3m3nt-framework-project</a></p>
+
 <p>It's been tested on : </p>
 
 <ul>
@@ -98,9 +105,86 @@ The DB Dump in place is for users who use MySQL and need demo data. Unfortunatel
 <p>Incase you test on another server please give your review.</p>
 
 <p>If installing it in a subfolder edit the .htaccess file to reflect the RewriteBase as the subfolder.</p>
+
+<p>Webserver Configuration in event you encounter issues with the routing engines and URLs give 404: </p>
+
+<h3>
+<a id="sample-apache2-configuration" class="anchor" href="#sample-apache2-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Apache2 Configuration</h3>
+
+<pre><code>&lt;Directory /var/www/&gt;
+    Options -Indexes +FollowSymLinks +Includes
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+    Require all granted # This is required for apache 2.4.3 or higher if lower version remove this line
+&lt;/Directory&gt;
+</code></pre>
+
+<h3>
+<a id="sample-nginx-configuration" class="anchor" href="#sample-nginx-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Nginx Configuration</h3>
+
+<pre><code>server {
+    root /var/www/html;
+    location / {
+        index index.php index.html index.htm;
+        try_files $uri /index.php?$query_string;
+    }
+    location ~ \.php$ {
+        fastcgi_pass ip_address:port;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    } 
+
+</code></pre>
+
+<h3>
+<a id="sample-iis-configuration" class="anchor" href="#sample-iis-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample IIS Configuration</h3>
+
+<pre><code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;configuration&gt;
+  &lt;system.webServer&gt;
+    &lt;rewrite&gt;
+      &lt;rules&gt;
+        &lt;rule name="Application" stopProcessing="true"&gt;
+          &lt;match url=".*" ignoreCase="false" /&gt;
+          &lt;conditions logicalGrouping="MatchAll"&gt;
+            &lt;add input="{REQUEST_FILENAME}" matchType="IsFile" ignoreCase="false" negate="true" /&gt;
+            &lt;add input="{REQUEST_FILENAME}" matchType="IsDirectory" ignoreCase="false" negate="true" /&gt;
+          &lt;/conditions&gt;
+          &lt;action type="Rewrite" url="index.php" appendQueryString="true" /&gt;
+        &lt;/rule&gt;
+      &lt;/rules&gt;
+    &lt;/rewrite&gt;
+  &lt;/system.webServer&gt;
+&lt;/configuration&gt; 
+
+</code></pre>
+
+<h3>
+<a id="sample-lighttpd-configuration" class="anchor" href="#sample-lighttpd-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Lighttpd Configuration</h3>
+
+<pre><code>$HTTP["host"] =~ "www\.example\.com$" {
+    url.rewrite-once = ( "^/(.*?)(\?.+)?$"=&gt;"/index.php/$1?$2" )
+    server.error-handler-404 = "/index.php"
+}
+
+}
+
+</code></pre>
       </section>
     </div>
 
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">OWASP Mth3l3m3nt Framework maintained by <a href="https://github.com/alienwithin">alienwithin</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
     
+
   </body>
 </html>
