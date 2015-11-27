@@ -1,199 +1,344 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="OWASP Mth3l3m3nt Framework : OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go.">
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<head>
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go.">
+    <meta name="author" content="Munir Njiru">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <title>OWASP Mth3l3m3nt Framework (OMF)</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <title>OWASP Mth3l3m3nt Framework</title>
-  </head>
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
 
-  <body>
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework">View on GitHub</a>
-          <a id="" align="left" href="http://munir.skilledsoft.com">Developer Site</a> || 
-          <a id="" href="https://owasp.org/index.php/OWASP_Mth3l3m3nt_Framework_Project">OWASP Page</a>
-          <h1 id="project_title">OWASP Mth3l3m3nt Framework</h1>
-          <h2 id="project_tagline">OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go.</h2>
-               <a class="btn btn-primary" href="http://alienwithin.github.io/OWASP-mth3l3m3nt-framework/framework-docs/">Developer Documentation</a>
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">OWASP Mth3l3m3nt Framework</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a href="#download">Download</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>OWASP Mth3l3m3nt Framework</h1>
+                        <h3>A penetration testing tool and exploitation framework to make pentesting on the go a reality.</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="http://alienwithin.github.io/OWASP-mth3l3m3nt-framework/framework-docs/" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Developer Guide</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/wiki" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">User Guide</span></a>
+                            </li>
+							<li>
+                                <a href="https://www.youtube.com/playlist?list=PL8peOGsl5TC4WscgWaNMx0xJlS6X2QJI0" class="btn btn-default btn-lg"><i class="fa fa-youtube fa-fw"></i> <span class="network-name">OMF Videos</span></a>
+                            </li>
+							<li>
+                                <a href="https://www.owasp.org/index.php/OWASP_Mth3l3m3nt_Framework_Project" class="btn btn-default btn-lg"><i class="fa fa-newspaper-o fa-fw"></i> <span class="network-name">OWASP Wiki</span></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
     </div>
+    <!-- /.intro-header -->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="owasp-mth3l3m3nt-framework" class="anchor" href="#owasp-mth3l3m3nt-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>OWASP Mth3l3m3nt Framework</h1>
+    <!-- Page Content -->
 
-<p>Modules Packed in so far are: </p>
+	<a  name="features"></a>
+	<div class="content-section-b">
 
-<ul>
-<li>Payload Store</li>
-<li>Shell Generator (PHP/ASP/JSP/JSPX)</li>
-<li>Payload Encoder and Decoder (Base64/Rot13/Hex/Hexwith \x seperator/ Hex with 0x Prefix)</li>
-<li>CURL GUI (GET/POST)</li>
-<li>LFI Exploitation module (currently prepacked with: Koha Lib Lime LFI/ Wordpress Aspose E-book generator LFI/ Zimbra Collaboration Server LFI)</li>
-<li>HTTP Bot Herd to control web shells. </li>
-<li>WHOIS</li>
-<li>String Tools </li>
-<li>Client Side Obfuscator</li>
-</ul>
+        <div class="container">
 
-<p>Currently it is set to use a flat file database. </p>
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Client Side Obfuscator</h2>
+                    <p class="lead">Obfuscate client side scripts with ease to non-readable formats , it may prove particularly useful in XSS attacks as well as CSRF.
 
-<p>Copy all the files into your webroot except db_dump_optional</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/cso.png" alt="">
+                </div>
+            </div>
 
-<p>Ensure the Folders Below are writeable: </p>
+        </div>
+        <!-- /.container -->
 
-<ul>
-<li>tmp</li>
-<li>framework/data</li>
-<li>framework/data/site_config.json</li>
-</ul>
-
-<p>It should run from the get go All just navigate to it.</p>
-
-<p>the login url is: /cnc</p>
-
-<p>username:mth3l3m3nt
-password:mth3l3m3nt</p>
-
-<p>By Default I have set it to use the JIG database but this you can change at any point in the backend. 
-The DB Dump in place is for users who use MySQL and need demo data. Unfortunately I have only done for MySQL. It's my DB of choice. </p>
-
-<p>Alternatively watch the installation here: </p>
-
-<p><a href="https://www.youtube.com/playlist?list=PL8peOGsl5TC4WscgWaNMx0xJlS6X2QJI0">https://www.youtube.com/playlist?list=PL8peOGsl5TC4WscgWaNMx0xJlS6X2QJI0</a></p>
-
-<p>If you would like to switch from JIG you can do so in the settings. Please note the DB has to be created, it only populates it with the required tables, it doesn't drop or create the DB , other supported Databases are: </p>
-
-<ul>
-<li>Mongo DB </li>
-<li>MSSQL</li>
-<li>PostgreSQL</li>
-<li>SQLite</li>
-<li>MySQL</li>
-</ul>
-
-<p>Other than SQLite please ensure that you have the PHP extensions for the Databases above so that it can access them through PHP Data Objects.</p>
-
-<p>For MySQL users needing MySQL Sample Data like alot of it especially payloads switch the database to MySQL and import data from the Dump to populate.</p>
-
-<p>Incase of questions or suggestions or bugs and what nots:
-<a href="http://munir.skilledsoft.com">http://munir.skilledsoft.com</a></p>
-
-<p>You may also send them or subscribe to the mailing list: 
-<a href="https://lists.owasp.org/mailman/listinfo/owasp-mth3l3m3nt-framework-project">https://lists.owasp.org/mailman/listinfo/owasp-mth3l3m3nt-framework-project</a></p>
-
-<p>It's been tested on : </p>
-
-<ul>
-<li>Apache </li>
-<li>Lightspeed</li>
-<li>Lighttpd</li>
-</ul>
-
-<p>Incase you test on another server please give your review.</p>
-
-<p>If installing it in a subfolder edit the .htaccess file to reflect the RewriteBase as the subfolder.</p>
-
-<p>Webserver Configuration in event you encounter issues with the routing engines and URLs give 404: </p>
-
-<h3>
-<a id="sample-apache2-configuration" class="anchor" href="#sample-apache2-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Apache2 Configuration</h3>
-
-<pre><code>&lt;Directory /var/www/&gt;
-    Options -Indexes +FollowSymLinks +Includes
-    AllowOverride All
-    Order allow,deny
-    Allow from all
-    Require all granted # This is required for apache 2.4.3 or higher if lower version remove this line
-&lt;/Directory&gt;
-</code></pre>
-
-<h3>
-<a id="sample-nginx-configuration" class="anchor" href="#sample-nginx-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Nginx Configuration</h3>
-
-<pre><code>server {
-    root /var/www/html;
-    location / {
-        index index.php index.html index.htm;
-        try_files $uri /index.php?$query_string;
-    }
-    location ~ \.php$ {
-        fastcgi_pass ip_address:port;
-        fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        include fastcgi_params;
-    } 
-
-</code></pre>
-
-<h3>
-<a id="sample-iis-configuration" class="anchor" href="#sample-iis-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample IIS Configuration</h3>
-
-<pre><code>
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;configuration&gt;
-  &lt;system.webServer&gt;
-    &lt;rewrite&gt;
-      &lt;rules&gt;
-        &lt;rule name="Application" stopProcessing="true"&gt;
-          &lt;match url=".*" ignoreCase="false" /&gt;
-          &lt;conditions logicalGrouping="MatchAll"&gt;
-            &lt;add input="{REQUEST_FILENAME}" matchType="IsFile" ignoreCase="false" negate="true" /&gt;
-            &lt;add input="{REQUEST_FILENAME}" matchType="IsDirectory" ignoreCase="false" negate="true" /&gt;
-          &lt;/conditions&gt;
-          &lt;action type="Rewrite" url="index.php" appendQueryString="true" /&gt;
-        &lt;/rule&gt;
-      &lt;/rules&gt;
-    &lt;/rewrite&gt;
-  &lt;/system.webServer&gt;
-&lt;/configuration&gt; 
-
-</code></pre>
-
-<h3>
-<a id="sample-lighttpd-configuration" class="anchor" href="#sample-lighttpd-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Lighttpd Configuration</h3>
-
-<pre><code>$HTTP["host"] =~ "www\.example\.com$" {
-    url.rewrite-once = ( "^/(.*?)(\?.+)?$"=&gt;"/index.php/$1?$2" )
-    server.error-handler-404 = "/index.php"
-}
-
-}
-
-</code></pre>
-      </section>
     </div>
+    <div class="content-section-a">
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">OWASP Mth3l3m3nt Framework maintained by <a href="https://github.com/alienwithin">alienwithin</a></p>
-       
-      </footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Web Herd</h2>
+                    <p class="lead">Control Web Based backdoors via HTTP on one central interface and never have run away webshells again. </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/webherd.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
     </div>
+    <!-- /.content-section-a -->
 
-    
+    <div class="content-section-b">
 
-  </body>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Easy Backdoor Generation</h2>
+                    <p class="lead">Easily generate backdoors for various platforms , minimal , non noisy and efficient to ensure your attacks are stealthy and successful. Be the ghost in the network. Current Support for: JSP, JSPX, PHP, ASP, ASPX</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/generate-php-shell.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Payload Encoding/Decoding</h2>
+                    <p class="lead">Encode or decode strings or payloads in various formats, This can be particularly useful in input injection and file inclusion attacks. Current Supported formats are : Base 64 , Regular Hex Format, Hex in \x Format , Hex with 0x Prefix , Rot 13 </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/payloaddecode.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+	 <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Easy Exploit Development</h2>
+                    <p class="lead">Develop File Inclusion exploits in as little as  8 Lines of code, This is easy and fast for extension of the framework.</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/lfi-exploits.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+	
+	<div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Generic Requests Module</h2>
+                    <p class="lead">This module is a similar service to hurl.it. We all love the curl capabilities it has but on internal pentests when dealing with web applications it becomes hard to use the service fully to this potential. Currently it supports the following requests: GET,HEAD,POST,TRACE,OPTIONS.  </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/gr.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+	<div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Payload Store</h2>
+                    <p class="lead">Store your frequently used payloads and notes on them so that you don't have to repeat a learning curve on executing the same attack again.</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/payloads.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+	
+<div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Other Features</h2>
+                    <p class="lead">Other Key Features include: 
+						<ul>
+							<li>string manipulation tools</li>
+							<li>WHOIS</li>
+							<li>LFI Exploitation Module</li>
+						</ul>
+					</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/dashboard.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+	<a  name="download"></a>
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Start Using OWASP Mth3l3m3nt Framework:</h2>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/zipball/master" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Zip Download</span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/tarball/master" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Tar.gz Download</span></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#features">Features</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#download">Download</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; OWASP Mth3l3m3nt Framework. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
 </html>
