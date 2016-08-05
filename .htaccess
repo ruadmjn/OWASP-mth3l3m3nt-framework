@@ -5,7 +5,7 @@ Options -Indexes
 # In such cases, it should be the path (relative to the document root)
 # containing this .htaccess file
 #
-#RewriteBase /
+RewriteBase /1
 
 #Return 404 on important files. This will prove effective especially to scanners
 RewriteRule ^(tmp)\/|\.ini$ - [R=404]
